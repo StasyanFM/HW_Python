@@ -16,6 +16,6 @@ rus = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ', 4:'ЙЫ', 5:'Ж
 N = abs(int(input('Введите 1, если играем в английской раскладке, либо 0, если в русской: ')))
 word = input('Введите слово: ').upper()
 if N == 1:
-	print('За это слово вы получаете', sum([k for i in word for k, v in eng.items() if i in v]), 'очков')
+	print('За это слово вы получаете', sum(k for i in word for k, v in eng.items() if i in v), 'очков')
 elif N == 0:
 	print('За это слово вы получаете', sum([k for i in word for k, v in rus.items() if i in v]), 'очков')

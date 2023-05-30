@@ -11,3 +11,12 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 #     **Вывод:** Парам пам-пам  
 
+
+poem = list(input('Напишите стихотворение: ').lower().split())
+print(poem)
+volwes = 'аеёиоуэыюя'
+num_volwes = [sum(x in volwes for x in y) for y in poem]
+if len(set(num_volwes)) == 1 :
+    res = "Парам пам-пам"  
+res = "Пам парам"
+print(res) 
